@@ -1,0 +1,190 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.nav-panel {
+  width: 100%;
+  height: 70px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.nav-panel a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: 0.3s;
+  display: flex;
+}
+.nav-panel a:hover {
+  background-color: #555;
+}
+.nav-panel .icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.dashboard {
+  background-color: rgb(246, 245, 242);
+  width: 100%;
+  height: calc(100vh - 70px);
+  padding: 50px;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard h2 {
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+.dashboard p {
+  color: #666;
+  font-size: 30px;
+  max-width: 800px;
+}
+
+.flex-windows h2 {
+  font-size: 35px;
+}
+/* סגנון לכל חלון */
+.window {
+  background-color: #fefefe;
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* סגנון לכותרת של כל חלון */
+.window h2 {
+  color: #2c3e50;
+}
+.window p {
+  font-size: 30px;
+}
+
+/* סגנון לתמונות */
+.window img {
+  max-width: 200px;
+  margin: 10px 0;
+}
+
+.flex-windows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding-left: 40px;
+  align-items: center;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: red;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: gray;
+  border: 1px solid gray;
+  display: none;
+  flex-direction: column;
+}
+
+.menu-items li {
+  padding: 10px;
+  text-align: right;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-items.show {
+  display: flex;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; /* הקטנת גודל גופן */
+  }
+
+  .dashboard {
+    padding: 20px; /* ריווח פנימי גדול יותר */
+  }
+
+  .flex-windows {
+    flex-direction: column; /* סידור חלונות בעמודה */
+    align-items: center; /* יישור מרכז של חלונות */
+  }
+
+  .window {
+    width: 90%; /* רוחב חלונות */
+    margin: 10px 0; /* מרווח בין חלונות */
+  }
+
+  .window img {
+    max-width: 100%; /* רוחב תמונות */
+    height: auto; /* גובה תמונות */
+  }
+}
+
+@media (max-width: 480px) {
+  .hamburger-icon {
+    display: flex;
+    align-items: center;
+    display: flex;
+  }
+
+  .menu-items {
+    position: static; /* הסרת מיקום אבסולוטי */
+    border: none; /* הסרת גבולות */
+  }
+
+  .nav-panel a {
+    display: none;
+  }
+}
